@@ -1,0 +1,19 @@
+# Book settings
+
+title: Frax Presentation
+author: Yiannis Koutelidakis
+copyright: 2022
+logo: logo.png
+
+# Force re-execution of notebooks on each build.
+execute:
+  execute_notebooks: force
+
+# GitHub Repo
+repository:
+  url: https://github.com/Algo2Play/algo2play.github.io.git
+html:
+  use_edit_page_button: false
+  use_issues_button: false
+  use_repository_button: false
+

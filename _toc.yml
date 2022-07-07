@@ -1,0 +1,11 @@
+# Table of contents
+
+format: jb-book
+root: intro.md
+chapters:
+- file: Factsheet
+- file: Timeline
+- file: Economics
+- file: Protocol
+- file: Governance
+- file: Metrics
