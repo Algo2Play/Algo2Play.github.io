@@ -1,0 +1,923 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metrics &#8212; Frax Presentation</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Frax Presentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   FRAX
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Factsheet.html">
+   Factsheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Timeline.html">
+   Timeline
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Economics.html">
+   Economics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Protocol.html">
+   Protocol
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Metrics.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what">
+   What
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#where">
+   Where
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#when">
+   When
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#who">
+   Who
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how">
+   How
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#standard-markdown">
+   Standard Markdown
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#text-formating">
+     Text Formating
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quotes">
+     Quotes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lists">
+     Lists
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#horizontal-rule">
+     Horizontal Rule
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#links">
+     Links
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#limited-support">
+   Limited Support
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tables">
+     Tables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#block-of-code">
+     Block of Code
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#footnotes">
+     Footnotes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#math">
+     Math
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#not-supported-in-jupyter-book">
+     Not supported in Jupyter Book
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#strikethrough">
+       Strikethrough
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#check-list">
+       Check List
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#myst-specific">
+   MyST Specific
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#colored-admonitions">
+     Colored Admonitions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hidden-toggles">
+     Hidden Toggles
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dropdowns">
+     Dropdowns
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dropdowns-with-admonitions">
+     Dropdowns with Admonitions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#panels">
+     Panels
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tabs">
+     Tabs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sidebars">
+     Sidebars
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#margin-note">
+     Margin Note
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#labels">
+     Labels
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#equations">
+     Equations
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#without-label">
+       Without Label
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#with-label">
+       With Label
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Metrics</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what">
+   What
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#where">
+   Where
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#when">
+   When
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#who">
+   Who
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how">
+   How
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#standard-markdown">
+   Standard Markdown
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#text-formating">
+     Text Formating
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quotes">
+     Quotes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lists">
+     Lists
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#horizontal-rule">
+     Horizontal Rule
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#links">
+     Links
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#limited-support">
+   Limited Support
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tables">
+     Tables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#block-of-code">
+     Block of Code
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#footnotes">
+     Footnotes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#math">
+     Math
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#not-supported-in-jupyter-book">
+     Not supported in Jupyter Book
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#strikethrough">
+       Strikethrough
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#check-list">
+       Check List
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#myst-specific">
+   MyST Specific
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#colored-admonitions">
+     Colored Admonitions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hidden-toggles">
+     Hidden Toggles
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dropdowns">
+     Dropdowns
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dropdowns-with-admonitions">
+     Dropdowns with Admonitions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#panels">
+     Panels
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tabs">
+     Tabs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sidebars">
+     Sidebars
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#margin-note">
+     Margin Note
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#labels">
+     Labels
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#equations">
+     Equations
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#without-label">
+       Without Label
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#with-label">
+       With Label
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="metrics">
+<h1>Metrics<a class="headerlink" href="#metrics" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what">
+<h2>What<a class="headerlink" href="#what" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>FRAX is a fractional-algorithmic stablecoin protocol, pegged to the USD.</p></li>
+</ul>
+</div>
+<div class="section" id="where">
+<h2>Where<a class="headerlink" href="#where" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>FRAX v.1 launched on Ethereum main-net on 21 December 2020.</p></li>
+</ul>
+</div>
+<div class="section" id="when">
+<h2>When<a class="headerlink" href="#when" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>First launched as Decentral Bank in 2019, a combined fractional/algorithmic SC.</p></li>
+</ul>
+</div>
+<div class="section" id="who">
+<h2>Who<a class="headerlink" href="#who" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Sam_Kazemian">Sam Kazemian</a>: in the past founded Everipedia, a blockchain-based fork of Wikipedia.</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Stephen_Moore_(writer)">Stephen Moore</a>: former WSJ editor and senior economic advisor to Donald Trump - nominated for Fed Chair but withdrew.</p></li>
+</ul>
+</div>
+<div class="section" id="how">
+<h2>How<a class="headerlink" href="#how" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.frax.finance/price-stability">Price Stability</a> As of February 2021, the system uses a <a class="reference external" href="https://en.wikipedia.org/wiki/PID_controller">PID Controller</a> to control the collateral ratio according to the change in the growth ratio.</p></li>
+</ul>
+<p>With MyST Markdown, you can define code cells with a directive like so:</p>
+<p>When your book is built, the contents of any <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> blocks will be
+executed with your default Jupyter kernel, and their outputs will be displayed
+in-line with the rest of your content.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>test</p>
+</div>
+</div>
+<div class="section" id="standard-markdown">
+<h2>Standard Markdown<a class="headerlink" href="#standard-markdown" title="Permalink to this headline">¶</a></h2>
+<p>These features are supported by all renderers as they are part of the basic set of features of Markdown. Some examples were extracted from the <a class="reference external" href="https://www.markdownguide.org/basic-syntax">official docs</a>.</p>
+<div class="section" id="text-formating">
+<h3>Text Formating<a class="headerlink" href="#text-formating" title="Permalink to this headline">¶</a></h3>
+<p>In a Markdown text one can use <strong>bold</strong>, <em>italics</em> or <em><strong>both</strong></em>. It is also posible to combine it with <code class="docutils literal notranslate"><span class="pre">monospace</span></code>.</p>
+</div>
+<div class="section" id="quotes">
+<h3>Quotes<a class="headerlink" href="#quotes" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>It is also possible to quote</p>
+</div></blockquote>
+</div>
+<div class="section" id="lists">
+<h3>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h3>
+<p>To keep everything organize, one usually use lists either ordered</p>
+<ol class="simple">
+<li><p>Step 1</p></li>
+<li><p>Step 2</p></li>
+<li><p>Step 3</p></li>
+</ol>
+<p>Or without any order</p>
+<ul class="simple">
+<li><p>Requirement 1</p></li>
+<li><p>Requirement 2</p></li>
+<li><p>Requirement 3</p></li>
+</ul>
+</div>
+<div class="section" id="horizontal-rule">
+<h3>Horizontal Rule<a class="headerlink" href="#horizontal-rule" title="Permalink to this headline">¶</a></h3>
+<p>Useful to separate sections</p>
+<hr class="docutils" />
+<p>From other non-related topic</p>
+</div>
+<div class="section" id="links">
+<h3>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h3>
+<p>You know that there many search engines online?</p>
+<p>There are <a class="reference external" href="https://duckduckgo.com/">some</a> which focus on privacy, <a class="reference external" href="https://www.startpage.com/">others</a> just work arround Google and <a class="reference external" href="https://www.searchencrypt.com/">there is also one</a> that uses ecryption!</p>
+</div>
+</div>
+<div class="section" id="limited-support">
+<h2>Limited Support<a class="headerlink" href="#limited-support" title="Permalink to this headline">¶</a></h2>
+<p>These features are part of some flavours of Markdown but not all renderers can process them. It is recommended to visualize this document in the target platform to check exactly which features are supported</p>
+<div class="section" id="tables">
+<h3>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h3>
+<p>Tables are really complicated in Markdown and should only be generated by <a class="reference external" href="http://www.tablesgenerator.com/markdown_tables">a specialized tool</a>. Don’t modify markdown tables manually</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Syntax</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Header</p></td>
+<td><p>Title</p></td>
+</tr>
+<tr class="row-odd"><td><p>Paragraph</p></td>
+<td><p>Text</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="block-of-code">
+<h3>Block of Code<a class="headerlink" href="#block-of-code" title="Permalink to this headline">¶</a></h3>
+<p>For code blocks, Jupyter Book will add a <code class="docutils literal notranslate"><span class="pre">Copy</span></code> button in the top left corner to easily copy all the text in the block.</p>
+<p>Some times one wants to share data</p>
+<div class="highlight-default notranslate" id="data"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;firstName&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;lastName&quot;</span><span class="p">:</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">25</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Or simply say hello</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="footnotes">
+<h3>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this headline">¶</a></h3>
+<p>Here’s a sentence with a footnote. <a class="footnote-reference brackets" href="#id2" id="id1">1</a></p>
+</div>
+<div class="section" id="math">
+<h3>Math<a class="headerlink" href="#math" title="Permalink to this headline">¶</a></h3>
+<p>Some renderers can process inline math, <span class="math notranslate nohighlight">\(x=2\)</span> and other can also process whole line math</p>
+<div class="math notranslate nohighlight">
+\[
+  \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
+\]</div>
+<p>If supported, alignment can be done with array</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{llll}
+a_{11}&amp; =b_{11}&amp; a_{12}&amp; =b_{12}\\
+a_{21}&amp; =b_{21}&amp; a_{22}&amp; =b_{22}+c_{22}
+\end{array}
+\end{split}\]</div>
+</div>
+<div class="section" id="not-supported-in-jupyter-book">
+<h3>Not supported in Jupyter Book<a class="headerlink" href="#not-supported-in-jupyter-book" title="Permalink to this headline">¶</a></h3>
+<p>These are features that some renderers support but are not supported by Jupyter Book</p>
+<div class="section" id="strikethrough">
+<h4>Strikethrough<a class="headerlink" href="#strikethrough" title="Permalink to this headline">¶</a></h4>
+<p>Some times you ~~make a mistake~~ have a great idea</p>
+<p>However, a HTML approach can produce the desired result</p>
+<p>Some times you <s>make a mistake</s> have a great idea</p>
+</div>
+<div class="section" id="check-list">
+<h4>Check List<a class="headerlink" href="#check-list" title="Permalink to this headline">¶</a></h4>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Write the press release</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Update the website</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Contact the media</p></li>
+</ul>
+<p>However, a HTML approach can produce the desired result</p>
+<p><label><input type="checkbox"> Write the press release</input></label><br>
+<label><input type="checkbox"> Update the website</input></label><br>
+<label><input type="checkbox"> Contact the media</input></label><br></p>
+</div>
+</div>
+</div>
+<div class="section" id="myst-specific">
+<h2>MyST Specific<a class="headerlink" href="#myst-specific" title="Permalink to this headline">¶</a></h2>
+<p>These are some features that are the moment are only compatible with Jupyter Book. That means that rendering the notebook in other services (Github, NBviewer, Nteract, Data Lore, etc.) might not work as shown below. If your only target platform is Jupyter Book, you can use any of the following.</p>
+<div class="section" id="colored-admonitions">
+<h3>Colored Admonitions<a class="headerlink" href="#colored-admonitions" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Here is a Note</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Here is an important</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p>Here is a Tip</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>text
+Here is an attention</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Here is a Warning</p>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<p>Here is an error</p>
+</div>
+<div class="admonition-admonition admonition">
+<p class="admonition-title">admonition</p>
+<p>Here is a custom admonition</p>
+</div>
+</div>
+<div class="section" id="hidden-toggles">
+<h3>Hidden Toggles<a class="headerlink" href="#hidden-toggles" title="Permalink to this headline">¶</a></h3>
+<div class="toggle docutils container">
+<p>Some hidden toggle content!</p>
+</div>
+</div>
+<div class="section" id="dropdowns">
+<h3>Dropdowns<a class="headerlink" href="#dropdowns" title="Permalink to this headline">¶</a></h3>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Outside Content<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Inside Content</p>
+</div>
+</details></div>
+<div class="section" id="dropdowns-with-admonitions">
+<span id="homework"></span><h3>Dropdowns with Admonitions<a class="headerlink" href="#dropdowns-with-admonitions" title="Permalink to this headline">¶</a></h3>
+<div class="dropdown admonition note">
+<p class="admonition-title">Note</p>
+<p>The note body will be hidden!</p>
+</div>
+</div>
+<div class="section" id="panels">
+<h3>Panels<a class="headerlink" href="#panels" title="Permalink to this headline">¶</a></h3>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Panel header 1</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">Panel body 1</p>
+</div>
+<div class="card-footer docutils">
+<p class="card-text">Panel footer 1</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Panel header 2</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">Panel body 2</p>
+</div>
+<div class="card-footer docutils">
+<p class="card-text">Panel footer 2</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tabs">
+<h3>Tabs<a class="headerlink" href="#tabs" title="Permalink to this headline">¶</a></h3>
+<div class="tabbed-set docutils">
+<input checked="checked" id="7897e3c3-7d23-4b46-a45d-39dc6f44a9aa" name="a42fcd8d-987b-4e4a-aaa0-489e373e3cc9" type="radio">
+</input><label class="tabbed-label" for="7897e3c3-7d23-4b46-a45d-39dc6f44a9aa">
+Tab 1 title</label><div class="tabbed-content docutils">
+<p>My first tab</p>
+</div>
+<input id="43ba97e5-185e-4753-b374-b6f5e6d9d40b" name="a42fcd8d-987b-4e4a-aaa0-489e373e3cc9" type="radio">
+</input><label class="tabbed-label" for="43ba97e5-185e-4753-b374-b6f5e6d9d40b">
+Tab 2 title</label><div class="tabbed-content docutils">
+<p>My second tab with <code class="docutils literal notranslate"><span class="pre">some</span> <span class="pre">code</span></code>!</p>
+</div>
+</div>
+</div>
+<div class="section" id="sidebars">
+<h3>Sidebars<a class="headerlink" href="#sidebars" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title">My sidebar title</p>
+<p>My sidebar content</p>
+</div>
+<p>Sidebars are shown in parallel to the main text, but they span inwards from the margins.</p>
+</div>
+<div class="section" id="margin-note">
+<h3>Margin Note<a class="headerlink" href="#margin-note" title="Permalink to this headline">¶</a></h3>
+<div class="margin sidebar">
+<p class="sidebar-title">An optional title</p>
+<p>My margin content</p>
+</div>
+<p>Margin notes are more discrete, useful for pointing minor details or add extra information.</p>
+<p>They span from the margin outwards</p>
+</div>
+<div class="section" id="labels">
+<h3>Labels<a class="headerlink" href="#labels" title="Permalink to this headline">¶</a></h3>
+<p>Would you like to write homework for your students? Check the <a class="reference internal" href="#homework"><span class="std std-ref">dropdowns</span></a>!</p>
+<p>It is always important to provide enough <a class="reference internal" href="#data"><span class="std std-ref">data</span></a> to support claims!</p>
+</div>
+<div class="section" id="equations">
+<h3>Equations<a class="headerlink" href="#equations" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="without-label">
+<h4>Without Label<a class="headerlink" href="#without-label" title="Permalink to this headline">¶</a></h4>
+<div class="math notranslate nohighlight">
+\[x^2 + y^2 = 1\]</div>
+</div>
+<div class="section" id="with-label">
+<h4>With Label<a class="headerlink" href="#with-label" title="Permalink to this headline">¶</a></h4>
+<div class="math notranslate nohighlight" id="equation-algebra">
+<span class="eqno">()<a class="headerlink" href="#equation-algebra" title="Permalink to this equation">¶</a></span>\[x^2 + y^2 = 1\]</div>
+<p>If the equation has a label, it can be then referenced <a class="reference internal" href="#equation-algebra">()</a></p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>This is the footnote.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Yiannis Koutelidakis<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
